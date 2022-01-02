@@ -25,6 +25,8 @@ body {
   box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);
   cursor: pointer;
   transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.9s;
 }
 
 .card:active {
@@ -40,4 +42,12 @@ body {
   position: absolute;
   border-radius: 5px;
   background: #ffffff;
+  backface-visibility: hidden;
+}
+.card-front {
+  transform: rotateY(180deg);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
 }
