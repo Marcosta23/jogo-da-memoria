@@ -3,5 +3,5 @@
 ## Professora Gabriela Pinheiro
 
 - Diferenciais:
-- Limitado a número máximo de pares errados;
+- Limitado o número máximo de pares errados;
 - Alert para indicar fim de jogo.
