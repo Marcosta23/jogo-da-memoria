@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let clicks = 0;
 
 
 function flipCard() {
@@ -23,6 +24,12 @@ function checkForMatch(){
     if(firstCard.dataset.card === secondCard.dataset.card){
         disableCards();
         return;
+    };
+    if(clicks < 5){
+        clicks++
+    }else{
+        alert('Game Over!\nPressione F5 para reiniciar a partida');
+        resetBoard();
     }
     unflipCards();
 }
